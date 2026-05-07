@@ -6,11 +6,12 @@ const cors=require('cors');
 const app=express();
 app.use(express.json());
 app.use(cors({
-    origin: 'http://localhost:3000',
-    'https://mongo-crud.vercel.app'
+    origin: [
+        'http://localhost:3000',
+        'https://mongo-crud.vercel.app'
+    ],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-}   
-));
+}));
 const FoodModel=require('./models/Food');
 mongoose.connect('mongodb+srv://admin:admin@cluster0.pqksyap.mongodb.net/?appName=Cluster0/food', {
 }).then(() => {
