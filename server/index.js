@@ -7,7 +7,7 @@ const app=express();
 app.use(express.json());
 app.use(cors({
     origin: 'http://localhost:3000',
-    'https:'//mongo-crud.vercel.app/',
+    'https://mongo-crud.vercel.app'
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
 }   
 ));
